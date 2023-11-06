@@ -2,13 +2,12 @@
 
 ## About
 
-tktk Write a short but descriptive summary of the content in this module.
+This module introduces EJS and rendering data to a template using Express. 
 
 ## Prerequisites
 
-- tktk
-- tktk
-- tktk
+- Intro to Express
+- Intro to Node
 
 ## Content
 
