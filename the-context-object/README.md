@@ -9,3 +9,4 @@ When we call res.render(), we can include an optional context object as argument
 
 https://expressjs.com/en/api.html#res.render
 
+https://www.geeksforgeeks.org/express-js-res-render-function/
