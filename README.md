@@ -14,7 +14,9 @@ This module introduces EJS and rendering data to a template using Express.
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
 | [Setup](./setup/README.md) | -- | -- | tktk skills covered |
-| [Fundamentals](./tktk-microlesson-02/README.md) | -- | -- | tktk skills covered |
+| [Fundamentals](./fundamentals/README.md) | -- | -- | tktk skills covered |
+| [Syntax](./syntax/README.md) | -- | -- | tktk skills covered |
+| [Syntax](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
 | [Syntax](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
 | **Total content**                                        | -- | -- |                     |
 
