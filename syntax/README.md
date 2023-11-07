@@ -4,10 +4,10 @@
 
 ## EJS syntax
 
-EJS uses a variety of tags to embed JavaScript code directly into a template.
+EJS uses [a variety of tags](https://ejs.co/#docs) to embed JavaScript code directly into a template.
 
 ## Scriptlet Tag
-`<% %>`
+`<%`
 
 This tag is for executing JavaScript, such as control-flow. This tag produces no output. 
 
@@ -32,7 +32,7 @@ Note that each line of JavaScript code needs its own pair of scriptlet tags. Try
 
 
 ## Outlet Tag
-`<%= %>`
+`<%=`
 
 This tag is for writing JavaScript expressions into the HTML page. It will output the value into the template. 
 
@@ -41,4 +41,5 @@ This tag is for writing JavaScript expressions into the HTML page. It will outpu
 ```
 
 
+Note that the closing tag for both tags is the same: `%>` 
 
