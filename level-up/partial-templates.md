@@ -41,10 +41,28 @@ In `partials/html-head.ejs`, add the following:
 </head>
 ```
 
-The only value that will be unique view to view is the `title`, so as long as we supply a title in the context object of each view we render, we can convert all of our boilerplate to use this partial template!
-
 > 🧠  Note that we don't close the `html` tag - that's ok, because it will be closed in the HTML file that this is imported into. 
 
+
+The only value that will be unique view to view is the `title`, so as long as we supply a title in the context object of each view we render, we can convert all of our boilerplate to use this partial template!
+
+Let's address that quickly - in `server.js`: 
+
+```javascript
+app.get('/', (req, res) => {
+  res.render('home.ejs', { 
+    // add a title property: 
+    title: 'Home Page',
+    msg: 'This is a message',
+    inventory: [
+      {name: 'Banana', qty: 4},
+      {name: 'Apple', qty: 10},
+      {name: 'Orange', qty: 3},
+      {name: 'Pineapple', qty: 0}
+    ]
+  })
+})
+```
 
 Next, in `partials/nav.ejs`, add the following: 
 
