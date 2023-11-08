@@ -19,21 +19,17 @@ To use a partial template in a view, we use the following `include` syntax:
 
 ## Creating partial templates
 
-Partial templates are just regular HTML. 
+Let's implement some partial templates in our existing code.
 
-Take the following nav as an example: 
-
-```html
-<body>
-  <nav>
-    <a href="/link-one"> Example Link 1 </a>
-    <a href="/link-two"> Example Link 2 </a>
-    <a href="/link-three"> Example Link 3 </a>
-  </nav>
+```bash
+mkdir views/partials
+touch views/partials/html-head.ejs
+touch views/partials/nav.ejs
 ```
 
+Our HTML boilerplate is the same in every view. Since this is the case, it makes sense to create a partial for the HTML head: 
 
-Let's take this a step further. Our HTML boilerplate is also the same in every view. Since this is the case, we can also make a partial for the HTML head: 
+In `partials/html-head.ejs`, add the following: 
 
 ```html
 <!DOCTYPE html>
@@ -45,7 +41,23 @@ Let's take this a step further. Our HTML boilerplate is also the same in every v
 </head>
 ```
 
-The only value that will be unique view to view is the `title`, so as long as we supply a title in the context object of each view we render, we can convert all of our boilerplate to use this partial template. 
+The only value that will be unique view to view is the `title`, so as long as we supply a title in the context object of each view we render, we can convert all of our boilerplate to use this partial template!
+
+> 🧠  Note that we don't close the `html` tag - that's ok, because it will be closed in the HTML file that this is imported into. 
+
+
+Next, in `partials/nav.ejs`, add the following: 
+
+```html
+<body>
+  <nav>
+    <a href="/link-one"> Example Link 1 </a>
+    <a href="/link-two"> Example Link 2 </a>
+    <a href="/link-three"> Example Link 3 </a>
+  </nav>
+```
+
+With these partials created, we can refactor `home.ejs`.
 
 Our updated code will look like this: 
 
@@ -53,9 +65,13 @@ Our updated code will look like this:
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-    <main>
-      <h1>Content</h1>
-    </main>
+    <h1>We are rendering a page!</h1>
+    <p><%= msg %></p>
+    <ul>
+      <% inventory.forEach((item) => { %>
+        <li> <%= item.name %> - <%= item.qty %> </li>
+      <% }) %>
+    </ul>
   <body>
 </html>
 ```
