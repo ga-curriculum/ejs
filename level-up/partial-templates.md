@@ -1,10 +1,14 @@
-# ![EJS - Level Up - Partials](./assets/hero.png)
+# ![EJS - Level Up - Partial Templates](./assets/hero.png)
+
+## Partial Templates
+
+EJS includes the ability to make our views more DRY by using partial templates. 
 
 The <%- %> EJS tags are for outputting HTML
 
-EJS Partial Templates are the best way to keep our views DRY.
 
-EJS includes the ability to make our views more DRY by using partial views: 
+
+
 
 ```html
 <%- include('./partials/html-head') %>
