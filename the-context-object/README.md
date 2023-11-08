@@ -4,7 +4,7 @@
 
 ## The Context Object / Locals Object
 
-When we call res.render(), we can also include an optional context object as an argument: 
+When we call `res.render()`, we can also include an optional context object as an argument: 
 
 ```javascript
 app.get('/', (req, res) => {
