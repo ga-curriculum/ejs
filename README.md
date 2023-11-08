@@ -16,7 +16,7 @@ This module introduces EJS and rendering data to a template using Express.
 | [Setup](./setup/README.md) | -- | -- | tktk skills covered |
 | [Fundamentals](./fundamentals/README.md) | -- | -- | tktk skills covered |
 | [Syntax](./syntax/README.md) | -- | -- | tktk skills covered |
-| [Syntax](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [The Context Object](./the-context-object/README.md) | -- | -- | tktk skills covered |
 | [Syntax](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
 | **Total content**                                        | -- | -- |                     |
 

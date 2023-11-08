@@ -4,7 +4,7 @@
 
 ## EJS syntax
 
-EJS uses [a variety of tags](https://ejs.co/#docs) to embed JavaScript code directly into a template.
+EJS uses [a variety of tags](https://ejs.co/#docs) to embed JavaScript code directly into a template. The two primary tags you'll use are the Scriptlet and Output tags: 
 
 ## Scriptlet Tag
 `<%`
@@ -31,7 +31,7 @@ Note that each line of JavaScript code needs its own pair of scriptlet tags. Try
 ```
 
 
-## Outlet Tag
+## Output Tag
 `<%=`
 
 This tag is for writing JavaScript expressions into the HTML page. It will output the value into the template. 
