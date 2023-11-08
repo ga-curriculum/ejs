@@ -34,7 +34,7 @@ Note that each line of JavaScript code needs its own pair of scriptlet tags. Try
 ## Output Tag
 `<%=`
 
-This tag is for writing JavaScript expressions into the HTML page. It will output the value into the template. 
+This tag is for writing JavaScript expressions into the HTML page. It will output the value into the template. Test out the following: 
 
 ```html 
 <p> <%= 'this will be capitalized'.toUpperCase() %> </p>
