@@ -4,11 +4,13 @@
 
 ## What is EJS?
 
-EJS is a templating language that lets you generate HTML markup with plain JavaScript.
+EJS (Embedded JavaScript) is a templating engine that lets you generate HTML markup with JavaScript. It does this through the use of template tags, which wrap JavaScript code in an HTML document. 
 
-It does this through the use of template tags, which wrap JavaScript code in an HTML document. 
+Template engines, simply put, combine templates with data to produce HTML:
 
-Notably, it complies with the Express view system, and as a result it is a popular choice when working with an Express app.
+<img src="./assets/template-engine.png" width="100%" alt="tktk hunter">
+
+We define HTML in the EJS syntax and specify how and where data will go on the page. Then, the template engine combines these data and generates the final HTML page. So, EJS takes your data and inserts it into the web page according to how you’ve defined the template. 
 
 ## Installing EJS
 
