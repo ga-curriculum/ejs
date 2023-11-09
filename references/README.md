@@ -2,6 +2,6 @@
 
 ## Lesson references
 
-- [tktk descriptive name of link]()
+- [EJS documentation](https://ejs.co/#docs)
 
 
