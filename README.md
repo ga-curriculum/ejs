@@ -1,31 +1,29 @@
-# ![[tktk Module Name]](./assets/tktk-hero.png)
+# ![EJS](./assets/tktk-hero.png)
 
 ## About
 
-tktk Write a short but descriptive summary of the content in this module.
+This module introduces EJS and rendering data to a template using Express. 
 
 ## Prerequisites
 
-- tktk
-- tktk
-- tktk
+- Intro to Express
+- Intro to Node
 
 ## Content
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [tktk Microlesson Name](./tktk-microlesson-01/README.md) | -- | -- | tktk skills covered |
-| [tktk Microlesson Name](./tktk-microlesson-02/README.md) | -- | -- | tktk skills covered |
-| [tktk Microlesson Name](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [Setup](./setup/README.md) | -- | -- | --- |
+| [Fundamentals](./fundamentals/README.md) | -- | -- | Define and understand how to use EJS. |
+| [Syntax](./syntax/README.md) | -- | -- | Understanding basic EJS tag syntax. |
+| [The Locals Object](./the-locals-object/README.md) | -- | -- | Passing data to a view template. |
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-01.md) | -- | -- | tktk skills covered |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-02.md) | -- | -- | tktk skills covered |
-| [tktk Level Up Microlesson Name](./level-up/tktk-microlesson-03.md) | -- | -- | tktk skills covered |
+| [Partial Templates](./level-up/partial-templates.md) | -- | -- | Create more DRY Express apps with partial templates. |
 | **Total Level Up content**                                          | -- | -- |                     |
 
 ## References
