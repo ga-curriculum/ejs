@@ -1,10 +1,10 @@
 # ![EJS - The Context Object](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to tktk
+**Learning objective:** By the end of this lesson, students will be understand how to pass data into a template. 
 
 ## The Context Object / Locals Object
 
-When we call `res.render()`, we can also include an optional context object as an argument: 
+When we call `res.render()`, we can also include an optional object as an argument: 
 
 ```javascript
 app.get('/', (req, res) => {
@@ -12,9 +12,9 @@ app.get('/', (req, res) => {
 })
 ```
 
-This object's properties define local variables for the view.
+This object is known either as the Context Object or the Locals object, and it's properties define local variables for the view being rendered. 
 
-> The context object is how we get data into the template.
+> The context object is how we get data into the template. Anything we put into this object will be available for us in the rendered view. 
 
 For example, if we add the following: 
 
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 })
 ```
 
-We can now access `title` within `home.ejs`:
+We can now access the `msg` property within `home.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -36,18 +36,19 @@ We can now access `title` within `home.ejs`:
 </head>
 <body>
   <h1>We are rendering a page!</h1>
-  <p><%= msg %></p>
+  <p><%= msg %></p> 
 </body>
 </html>
 ```
 
-The context object is just a regular object, as such it can hold any type of data: 
+[tktk ss]
+
+The locals object is just a regular object, as such it can hold any type of data. Let's pass an example array of objects, representing an inventory of fruit.
 
 ```javascript
 app.get('/', (req, res) => {
   res.render('home.ejs', { 
     msg: 'This is a message',
-    totalSales: 5000,
     inventory: [
       {name: 'Banana', qty: 4},
       {name: 'Apple', qty: 10},

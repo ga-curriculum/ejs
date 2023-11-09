@@ -22,7 +22,7 @@ EJS and other view engines are special - we don’t need to import them - `Expre
 
 ## Using EJS to render .ejs files
 
-`Express` applications automatically look inside of a `views` directory for template files, so we will put our view templates inside a `views` folder:
+`Express` applications automatically look inside of a `views` directory for template files, so we will put our view templates inside a new `views` folder:
 
 ```bash
 mkdir views
@@ -42,8 +42,7 @@ app.get('/', (req, res) => {
 })
 ```
 
- As mentioned earlier, Express will automatically look in the `views` directory, so `home.ejs` is sufficient for the template to be located correctly. 
-
+As mentioned earlier, Express will automatically look in the `views` directory, so `home.ejs` is sufficient for the template to be located correctly. 
 
 Finally, inside `home.ejs`, add the following HTML: 
 
