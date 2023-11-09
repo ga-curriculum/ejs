@@ -10,10 +10,9 @@ It does this through the use of template tags, which wrap JavaScript code in an 
 
 Notably, it complies with the Express view system, and as a result it is a popular choice when working with an Express app.
 
-
 ## Installing EJS
 
-To install the EJS view engine package: 
+To install the EJS view engine package, use the following command: 
 
 ```bash
 npm i ejs
@@ -23,7 +22,7 @@ EJS and other view engines are special - we don’t need to import them - `Expre
 
 ## Using EJS to render .ejs files
 
-Express applications automatically look inside of a `views` directory for template files, so we will put our view templates inside a `views` folder:
+`Express` applications automatically look inside of a `views` directory for template files, so we will put our view templates inside a `views` folder:
 
 ```bash
 mkdir views
@@ -31,7 +30,7 @@ touch views/home.ejs
 ```
 `.ejs` is the file extension for the EJS view engine.
 
-In `server.js`, we're currently using `res.send()` to send an HTTP response. In order to use our new EJS file, we want to instead have Express render an entire view. 
+In `server.js`, we're currently using `res.send()` to send an HTTP response. In order to use our new EJS file, we want to instead have `Express` render an entire view. 
 
 To do so, we'll use `res.render()` instead of `res.send()`.
 

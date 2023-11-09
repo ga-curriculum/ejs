@@ -1,5 +1,6 @@
 # ![EJS - Setup](./assets/hero.png)
 
+## Setup
 
 Open your Terminal application and navigate to your `~/code/ga/lectures` directory:
 

@@ -1,6 +1,6 @@
 # ![EJS - Syntax](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to tktk
+**Learning objective:** By the end of this lesson, students will be able to use EJS tags to inject JavaScript into HTML. 
 
 ## EJS syntax
 
