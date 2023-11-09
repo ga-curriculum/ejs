@@ -33,11 +33,6 @@ In the terminal, create a `package.json` with all of the default settings by run
 npm init -y
 ```
 
-Open the new `package.json` file, and add the following line below `"description": "",` to let `node` know that our project is using ES modules: 
-
-```bash
-"type": "module",
-```
 
 Now that we have a `package.json` file we can add a package from `npm` to our project. We're going to add `Express` to our project next: 
 
@@ -51,7 +46,7 @@ npm i express
 In `server.js`, add the following starter code: 
 
 ```javascript
-import express from 'express'
+const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
