@@ -1,4 +1,4 @@
-# ![EJS - The Context Object](./assets/hero.png)
+# ![EJS - The Locals Object](./assets/hero.png)
 
 **Learning objective:** By the end of this lesson, students will be understand how to pass data into a template. 
 

@@ -1,13 +1,13 @@
 # ![EJS - Level Up - Partial Templates](./assets/hero.png)
 
-## Partial Templates
+## Why use partial templates?
 
 Picture that you have an app with 10 different views. Then, 
-imagine that you have a nav bar that you want to include at the top of each view. You __could__ manually copy and paste the same HTML code at the top of each view, which would lead to the same nav across multiple pages. 
+imagine that you have a nav bar that you want to include at the top of each view. You __could__ manually copy and paste the same HTML code at the top of each view, which would lead to an identical nav across multiple pages. 
 
-But then imagine that you need to add a new link to the nav. You would have to go through and manually update the HTML for across all ten views. 
+Now imagine that you need to add a new link to your nav. You would have to go through and manually update the HTML across all ten views - what a pain! 
 
-Fortunately, EJS includes the ability to make our views more DRY by using partial templates! 
+Fortunately, EJS includes the ability to make our views more DRY by using partial templates. Partial templates are essentially reuseable bits of template code that we can add into our EJS files. With a partial template, we only have to code out the `nav` once, and then we can include it in each view. Even better, if we need to make a change to the `nav`, we only need to touch one file. 
 
 The <%- %> EJS tags allow us to output HTML, meaning we can directly inject HTML code from other files into our views. 
 
@@ -41,8 +41,7 @@ In `partials/html-head.ejs`, add the following:
 </head>
 ```
 
-> 🧠  Note that we don't close the `html` tag - that's ok, because it will be closed in the HTML file that this is imported into. 
-
+> 🧠  Note that we don't close the `html` tag - that's ok, these are called partial for a reason!  It will be closed in the HTML file that this is imported into. 
 
 The only value that will be unique view to view is the `title`, so as long as we supply a title in the context object of each view we render, we can convert all of our boilerplate to use this partial template!
 
@@ -75,9 +74,9 @@ Next, in `partials/nav.ejs`, add the following:
   </nav>
 ```
 
-With these partials created, we can refactor `home.ejs`.
+With these partials created, we can refactor `home.ejs`. Let's remove the existing boilerplate, and in its place we'll include our new partial templates.
 
-Our updated code will look like this: 
+Our updated `server.js` code will look like this: 
 
 ```html
 <%- include('./partials/html-head') %>
@@ -93,4 +92,5 @@ Our updated code will look like this:
   <body>
 </html>
 ```
+
 
