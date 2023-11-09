@@ -13,18 +13,17 @@ This module introduces EJS and rendering data to a template using Express.
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [Setup](./setup/README.md) | -- | -- | tktk skills covered |
-| [Fundamentals](./fundamentals/README.md) | -- | -- | tktk skills covered |
-| [Syntax](./syntax/README.md) | -- | -- | tktk skills covered |
-| [The Context Object](./the-context-object/README.md) | -- | -- | tktk skills covered |
-| [Syntax](./tktk-microlesson-03/README.md) | -- | -- | tktk skills covered |
+| [Setup](./setup/README.md) | -- | -- | --- |
+| [Fundamentals](./fundamentals/README.md) | -- | -- | Define and understand how to use EJS. |
+| [Syntax](./syntax/README.md) | -- | -- | Understanding basic EJS tag syntax. |
+| [The Locals Object](./the-locals-object/README.md) | -- | -- | Passing data to a view template. |
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [Partial Templates](./level-up/partial-templates.md) | -- | -- | tktk skills covered |
+| [Partial Templates](./level-up/partial-templates.md) | -- | -- | Create more DRY Express apps with partial templates. |
 | **Total Level Up content**                                          | -- | -- |                     |
 
 ## References

@@ -2,7 +2,7 @@
 
 **Learning objective:** By the end of this lesson, students will be understand how to pass data into a template. 
 
-## The Context Object / Locals Object
+## The Locals Object
 
 When we call `res.render()`, we can also include an optional object as an argument: 
 
@@ -12,9 +12,9 @@ app.get('/', (req, res) => {
 })
 ```
 
-This object is known either as the Context Object or the Locals object, and it's properties define local variables for the view being rendered. 
+This object is the locals object, and it's properties define local variables for the view being rendered. 
 
-> The context object is how we get data into the template. Anything we put into this object will be available for us in the rendered view. 
+> The locals object is how we get data into the template. Anything we put into this object will be available for us in the rendered view. 
 
 For example, if we add the following: 
 
@@ -58,7 +58,6 @@ app.get('/', (req, res) => {
   })
 })
 ```
-
 
 
 
