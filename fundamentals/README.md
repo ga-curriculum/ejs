@@ -10,7 +10,7 @@ Template engines, simply put, combine templates with data to produce HTML:
 
 <img src="./assets/template-engine.png" width="100%" alt="tktk hunter">
 
-We define HTML in the EJS syntax and specify how and where data will go on the page. Then, the template engine combines these data and generates the final HTML page. So, EJS takes your data and inserts it into the web page according to how you’ve defined the template. 
+In EJS syntax, we define static HTML and also specify how and where data will go on the page. Then, the template engine combines these two elements and generates the final HTML page. So, EJS takes your data and inserts it into the web page according to how you’ve defined the template. 
 
 ## Installing EJS
 
@@ -22,7 +22,7 @@ npm i ejs
 
 EJS and other view engines are special - we don’t need to import them - `Express` knows how to find them all on its own.
 
-## Using EJS to render .ejs files
+## Rendering .ejs files
 
 `Express` applications automatically look inside of a `views` directory for template files, so we will put our view templates inside a new `views` folder:
 
@@ -62,4 +62,4 @@ Finally, inside `home.ejs`, add the following HTML:
 </html>
 ```
 
-Run the server, and you should see 'We are rendering a page!' 
+Run the server, and you should see 'We are rendering a page!'. 
