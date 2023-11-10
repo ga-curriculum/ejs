@@ -62,4 +62,4 @@ Finally, inside `home.ejs`, add the following HTML:
 </html>
 ```
 
-Run the server, and you should see 'We are rendering a page!'. 
+Refresh your browser, and you should see 'We are rendering a page!'. 
