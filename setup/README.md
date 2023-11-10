@@ -58,13 +58,10 @@ app.listen(3000, () => {
 })
 ```
 
-- Use `node` to execute the `server.js` file by using this command in your terminal:
+- Use `nodemon` to execute the `server.js` file by using this command in your terminal:
 
 ```bash
-node server.js
+nodemon
 ```
 
-[tktk - do we prefer npm start here? Do we prefer nodemon if we can verify it was globally installed?]
-
-
-
+Visit [localhost:3000](http://localhost:3000/) to make sure you did everything correctly.
