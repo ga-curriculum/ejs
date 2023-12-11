@@ -12,7 +12,7 @@ app.get('/', (req, res) => {
 })
 ```
 
-This object is the locals object, and it's properties define local variables for the view being rendered. 
+This object is the locals object, and its properties define local variables for the view being rendered.  The key of the property becomes the variable name in the EJS file, and the value of the property becomes the value of the variable in the EJS file.
 
 > The locals object is how we get data into the template. Anything we put into this object will be available for us in the rendered view. 
 
@@ -24,7 +24,7 @@ app.get('/', (req, res) => {
 })
 ```
 
-We can now access the `msg` property within `home.ejs`:
+We can now access the `msg` variable within `home.ejs`:
 
 ```html
 <!DOCTYPE html>
@@ -43,7 +43,7 @@ We can now access the `msg` property within `home.ejs`:
 
 [tktk ss]
 
-The locals object is just a regular object, as such it can hold any type of data. Let's pass an example array of objects, representing an inventory of fruit.
+The locals object is just a regular object, and as such it can hold any type of data. Let's pass an example array of objects, representing an inventory of fruit.
 
 ```javascript
 app.get('/', (req, res) => {
@@ -59,7 +59,28 @@ app.get('/', (req, res) => {
 })
 ```
 
+We can now loop through that array in the EJS file
 
-
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <h1>We are rendering a page!</h1>
+  <p><%= msg %></p>
+  <ul>
+    <% inventory.forEach((fruit)=>{ %>
+      <li>
+        <%= fruit.name %>: <%= fruit.qty %>
+      </li>
+    <% }) %>
+  </ul>
+</body>
+</html>
+```
 
 
