@@ -17,6 +17,7 @@ This module introduces EJS and rendering data to a template using Express.
 | [Fundamentals](./fundamentals/README.md) | -- | -- | Define and understand how to use EJS. |
 | [Syntax](./syntax/README.md) | -- | -- | Understanding basic EJS tag syntax. |
 | [The Locals Object](./the-locals-object/README.md) | -- | -- | Passing data to a view template. |
+| [Adding a Show Route](./the-locals-object/README.md) | -- | -- | Passing data to a view template. |
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
