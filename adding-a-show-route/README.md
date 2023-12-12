@@ -4,7 +4,9 @@
 
 ## Show Route
 
-In `server.js`, we'll move our array of fruit objects out of `app.get()` and assign it to a variable named `inventory`. In the context object of our `index` route, we'll assign this new `inventory` variable as the value:
+Next, we'll add a show route to our app. The goal is to have each of the `li`'s in our `home.ejs` view be clickable links that will take us to a page with information about the specific object we clicked on. This is typically referred to as a `show` page. 
+
+In `server.js`, we'll move our array of fruit objects out of `app.get()` and assign it to a variable named `inventory`. In the context object of our route, we'll assign this new `inventory` variable as the value:
 
 ```js
 const express = require('express')
@@ -33,7 +35,7 @@ app.listen(3000, () => {
 
 Nothing has changed in terms of functionality, but now other functions can also access the data held in `inventory`. 
 
-Underneath the index route in `server.js`, add a new route: 
+Underneath our first route in `server.js`, add a new route: 
 
 ```js
 app.get('/:fruitId', (req, res) => {
@@ -82,9 +84,10 @@ app.get('/:fruitId', (req, res) => {
   })
 })
 ```
+
 Because the list on our index page is generated from the `inventory` array, we can safely predict the order of ours link will be identical to the order of our objects. If we click `Banana`, the first element in our `inventory`, we expect `fruitId` to equal 0. If we click `Pineapple`, we expect `fruitId` to equal 3. We can in turn use this number to identify which link was clicked on. If a user clicks on `Pineapple`, the number 3 can be used to access the object at index 3 in `inventory`. 
 
-Once we start working with external servers, we'll use more sophisticated or accurate methods to find the data than an index. For a small scale example, using the index of the object in our data array works fine as an example.
+Once we start working with external servers, we'll use more sophisticated or accurate methods to find the data than an index. For a small scale example, using the index of the object in our data array works fine to demonstrate the relationship between the "front-end" and "back-end" in our app. 
 
 
 
