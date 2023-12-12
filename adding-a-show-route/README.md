@@ -35,7 +35,27 @@ app.listen(3000, () => {
 
 Nothing has changed in terms of functionality, but now other functions can also access the data held in `inventory`. 
 
-Underneath our first route in `server.js`, add a new route: 
+Next, we'll need to make an adjustment to `home.ejs`: 
+
+```html
+  <h1>We are rendering a page!</h1>
+    <p><%= msg %></p>
+    <ul>
+      <!-- Add the index parameter -->
+      <% inventory.forEach((fruit, index)=>{ %>
+        <!-- Wrap each li in an a tag -->
+        <a href="/<%= index %>">
+          <li>
+            <%= fruit.name %>: <%= fruit.qty %>
+          </li>
+        </a>
+      <% }) %>
+    </ul>
+  </body>
+</html>
+```
+
+At the moment, these links will all throw errors. This is because we have not established a route for them yet! Underneath our first route in `server.js`, add a new route: 
 
 ```js
 app.get('/:fruitId', (req, res) => {
