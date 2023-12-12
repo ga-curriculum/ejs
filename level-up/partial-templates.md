@@ -85,8 +85,10 @@ Our updated `server.js` code will look like this:
     <h1>We are rendering a page!</h1>
     <p><%= msg %></p>
     <ul>
-      <% inventory.forEach((item) => { %>
-        <li> <%= item.name %> - <%= item.qty %> </li>
+      <% inventory.forEach((fruit)=>{ %>
+        <li>
+          <%= fruit.name %>: <%= fruit.qty %>
+        </li>
       <% }) %>
     </ul>
   <body>
