@@ -39,34 +39,14 @@ In `partials/html-head.ejs`, add the following:
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
 </head>
+<body>
 ```
 
 > 🧠  Note that we don't close the `html` tag - that's ok, these are called partial for a reason!  It will be closed in the HTML file that this is imported into. 
 
-The only value that will be unique view to view is the `title`, so as long as we supply a title in the context object of each view we render, we can convert all of our boilerplate to use this partial template!
-
-Let's address that quickly - in `server.js`: 
-
-```javascript
-app.get('/', (req, res) => {
-  res.render('home.ejs', { 
-    // add a title property: 
-    title: 'Home Page',
-    msg: 'This is a message',
-    inventory: [
-      {name: 'Banana', qty: 4},
-      {name: 'Apple', qty: 10},
-      {name: 'Orange', qty: 3},
-      {name: 'Pineapple', qty: 0}
-    ]
-  })
-})
-```
-
 Next, in `partials/nav.ejs`, add the following: 
 
 ```html
-<body>
   <nav>
     <a href="/link-one"> Example Link 1 </a>
     <a href="/link-two"> Example Link 2 </a>
@@ -76,23 +56,51 @@ Next, in `partials/nav.ejs`, add the following:
 
 With these partials created, we can refactor `home.ejs`. Let's remove the existing boilerplate, and in its place we'll include our new partial templates.
 
-Our updated `server.js` code will look like this: 
+Our updated `home.ejs` code will look like this: 
 
 ```html
 <%- include('./partials/html-head') %>
 <%- include('./partials/nav') %>
 
-    <h1>We are rendering a page!</h1>
-    <p><%= msg %></p>
-    <ul>
-      <% inventory.forEach((fruit)=>{ %>
-        <li>
-          <%= fruit.name %>: <%= fruit.qty %>
-        </li>
+  <h1>We are rendering a page!</h1>
+  <p><%= msg %></p>
+  <ul>
+      <% inventory.forEach((fruit, index)=>{ %>
+        <a href="/<%= index %>">
+          <li>
+            <%= fruit.name %>: <%= fruit.qty %>
+          </li>
+        </a>
       <% }) %>
     </ul>
   <body>
 </html>
 ```
 
+Finally, let's reuse the same partials to include our nav bar in `show.ejs` as well. 
 
+```html
+<%- include('./partials/html-head') %>
+<%- include('./partials/nav') %>
+
+    <h1>This is a page about <%= fruit.name %>s</h1>
+    <p>There are <%= fruit.qty %> left.</p>
+  </body>
+</html>
+```
+
+Now we have a nav bar that persists across all of our views! If we want to make a change to the nav bar on every view, we only need to edit `nav.ejs` once! 
+
+For example, if we wanted to add a homepage link, we could make an edit like this: 
+
+```html 
+<nav>
+  <a href="/"> Home </a>
+  <a href="/link-two"> Example Link 2 </a>
+  <a href="/link-three"> Example Link 3 </a>
+</nav>
+```
+
+If we check the browser, we can see that this is updated everywhere. Now, when the user navigates to a show route, they can use the home link rather than hitting the back button in their browser. 
+
+If you were to continue building out this website, adding multiple new views that need navigation, you can imagine the benefit of consolidating all of this code into one easily reuseable code snippet. That's the power of partials! 
