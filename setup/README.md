@@ -40,7 +40,6 @@ Now that we have a `package.json` file we can add a package from `npm` to our pr
 npm i express
 ```
 
-> 🧠 The i in npm i is an alias for install
 
 
 In `server.js`, add the following starter code: 
@@ -64,4 +63,4 @@ app.listen(3000, () => {
 nodemon
 ```
 
-Visit [localhost:3000](http://localhost:3000/) to make sure you did everything correctly.
+Visit [localhost:3000](http://localhost:3000/) to verify your setup was sucessful! 

@@ -1,52 +1,40 @@
 # ![EJS - Fundamentals](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be able to define and use EJS.
+**Learning objective:** By the end of this lesson, students will be able to render EJS view files from an express server to the browser.
 
-## What is EJS?
+## Getting started with EJS `views`
 
-EJS (Embedded JavaScript) is a templating engine that lets you generate HTML markup with JavaScript. It does this through the use of template tags, which wrap JavaScript code in an HTML document. 
+In the context of EJS (Embedded JavaScript) and web development, "views" are template files that contain a mix of HTML and JavaScript. These files are used to generate HTML content dynamically. 
 
-Template engines, simply put, combine templates with data to produce HTML:
+Let's add EJS to our application and explore! 
 
-<img src="./assets/template-engine.png" width="100%" alt="tktk hunter">
+### Installing EJS
 
-In EJS syntax, we define static HTML and also specify how and where data will go on the page. Then, the template engine combines these two elements and generates the final HTML page. So, EJS takes your data and inserts it into the web page according to how you’ve defined the template. 
-
-## Installing EJS
-
-To install the EJS view engine package, use the following command: 
+To add EJS to your project, you need to install it using `npm`:
 
 ```bash
 npm i ejs
 ```
 
-EJS and other view engines are special - we don’t need to import them - `Express` knows how to find them all on its own.
+> EJS and other view engines are special - we don’t need to import them in `server.js` to use them - Express knows how to find them all on its own.
 
-## Rendering .ejs files
+### Organizing `.ejs` files
 
-`Express` applications automatically look inside of a `views` directory for template files, so we will put our view templates inside a new `views` folder:
+In Express applications, there's a convention for organizing your EJS templates. Express automatically searches for these templates in a specific folder named `views`. So, to keep things organized and functioning correctly, you should store all your EJS template files in this folder.
 
-```bash
-mkdir views
-touch views/home.ejs
-```
-`.ejs` is the file extension for the EJS view engine.
+1. First, create a new directory named `views` in your project. This is where all your `.ejs` files will live: 
 
-In `server.js`, we're currently using `res.send()` to send an HTTP response. In order to use our new EJS file, we want to instead have `Express` render an entire view. 
+  ```bash
+  mkdir views
+  ```
 
-To do so, we'll use `res.render()` instead of `res.send()`.
+2. Next, create your first EJS template file. Let's name it `home.ejs`. This file will serve as the template for your homepage.
 
-`res.render()` takes a `view` argument, which will be the file path of the view to render:
+  ```bash
+  touch views/home.ejs
+  ```
 
-```javascript
-app.get('/', (req, res) => {
-  res.render('home.ejs')
-})
-```
-
-As mentioned earlier, Express will automatically look in the `views` directory, so `home.ejs` is sufficient for the template to be located correctly. 
-
-Finally, inside `home.ejs`, add the following HTML: 
+3. Finally, inside `home.ejs`, add the following HTML: 
 
 ```html
 <!DOCTYPE html>
@@ -62,4 +50,31 @@ Finally, inside `home.ejs`, add the following HTML:
 </html>
 ```
 
-Refresh your browser, and you should see 'We are rendering a page!'. 
+> Files for EJS swill always have the `.ejs` extension, even though their contents look like HTML. This extension tells Express that these are template files.
+
+### EJS rendering in Express 
+
+When working with Express and EJS, we transition from using `res.send()` for sending plain text responses to using `res.render()` for displaying complete HTML pages created with EJS templates.
+
+1. Open server.js and take a look at the example route. Previously, we might have used `res.send()` to send back responses.
+
+```js
+app.get('/', (req, res) => {
+  res.send('Server is running')
+})
+```
+
+2. Now, we'll replace `res.send()` with `res.render()` to tell Express to generate a full HTML page using an EJS template.
+
+    The `res.render()` function requires one argument - the name of the EJS file or *view* you want to use. For example, we can render our template file named `home.ejs` located in the views directory:
+
+  ```js
+  app.get('/', (req, res) => {
+    res.render('home.ejs')
+  })
+  ```
+
+  > Here, `res.render('home.ejs')` instructs Express to look for `home.ejs` in the `views` folder and use it to create the HTML response.
+
+
+Refresh your browser, and you should see *'We are rendering a page!'* 
