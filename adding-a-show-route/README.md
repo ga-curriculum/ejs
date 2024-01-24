@@ -1,12 +1,16 @@
 # ![EJS - Adding a Show Route](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will be understand how to create a show route for a list of data.
+**Learning objective:** By the end of this lesson, students will be able to create a 'show' route in an Express application using EJS to display details of individual items from a data list.
 
 ## Show Route
 
-Next, we'll add a show route to our app. The goal is to have each of the `li`'s in our `home.ejs` view be clickable links that will take us to a page with information about the specific object we clicked on. This is typically referred to as a `show` page. 
+Next, we'll add a show route to our app. The end goal is for each of the `li`'s in our fruit list become clickable links that take us to a page with information about the specific fruit we clicked on. This is typically referred to as a `show` page. 
 
-In `server.js`, we'll move our array of fruit objects out of `app.get()` and assign it to a variable named `inventory`. In the context object of our route, we'll assign this new `inventory` variable as the value:
+We'll begin by organizing our data and setting up our show route. This route will enable users to view details of specific items by clicking on them in a list.
+
+**Organizing Data:**
+
+In `server.js`, move the array of fruit objects from the route handler to a global variable called `inventory` . This makes the data accessible to other route functions as well:
 
 ```js
 const express = require('express')
@@ -32,30 +36,32 @@ app.listen(3000, () => {
   console.log('Listening on port 3000')
 })
 ```
+> Nothing has changed in terms of functionality, but now other functions can also access the data held in `inventory`. 
 
-Nothing has changed in terms of functionality, but now other functions can also access the data held in `inventory`. 
 
-Next, we'll need to make an adjustment to `home.ejs`: 
+**Updating home.ejs:**
+
+Next, in `home.ejs`, modify the list items to be clickable links, each directing to a unique route based on the item's index.
 
 ```html
-  <h1>We are rendering a page!</h1>
-    <p><%= msg %></p>
-    <ul>
-      <!-- Add the index parameter -->
-      <% inventory.forEach((fruit, index)=>{ %>
-        <!-- Wrap each li in an a tag -->
-        <a href="/<%= index %>">
-          <li>
-            <%= fruit.name %>: <%= fruit.qty %>
-          </li>
-        </a>
-      <% }) %>
-    </ul>
-  </body>
-</html>
+<h1>We are rendering a page!</h1>
+<p><%= msg %></p>
+<ul>
+  <!-- Add the index parameter -->
+  <% inventory.forEach((fruit, index)=>{ %>
+    <!-- Wrap each li in an a tag -->
+    <a href="/<%= index %>">
+      <li><%= fruit.name %>: <%= fruit.qty %></li>
+    </a>
+  <% }) %>
+</ul>
 ```
 
-At the moment, these links will all throw errors. This is because we have not established a route for them yet! Underneath our first route in `server.js`, add a new route: 
+### Establishing the `show`  route
+
+At the moment, these links will all throw errors. This is because we have not established a route for them yet! 
+
+Create a new route in `server.js` that listens for requests to `/:fruitId` and logs the `req.params` object.
 
 ```js
 app.get('/:fruitId', (req, res) => {
@@ -63,17 +69,19 @@ app.get('/:fruitId', (req, res) => {
 })
 ```
 
-For now, all this route will do is listen for a request and then console.log the attached `req.params`. Click on a few of the links in the browser, and examine your server terminal. You should see that `req.params` is an object that looks something like `{ fruitId: 1 }`, where `1` will be replaced with whatever the index of the link you clicked was. 
+For now, all this route will do is listen for a request and then `console.log` the attached `req.params`. Click on a few of the links in the browser, and examine your terminal. You should see that `req.params` is an object that looks something like `{ fruitId: 1 }`, where `1` will be replaced with the index of the item you clicked on. 
 
-Next, we want to make it so that whenever a user hits the route above by clicking on an object's name in the list, we render a template page with the data from that specific object. 
+### Rendering the `show` page
 
-For that, we'll first need a new `ejs` file. In your `views` directory, make a new file named `show.ejs`: 
+Next, our goal is to ensure that when a user clicks on an item in our list, our application will display a page specifically dedicated to that item. This page will show detailed information about the item clicked. To achieve this, we first need to create a new EJS template file.
+
+Create a new EJS file named `show.ejs` in the `views` directory:
 
 ```bash
 touch views/show.ejs
 ```
 
-In `show.ejs`, add the following: 
+Add HTML content to `show.ejs`, making use of the fruit object to display specific details.
 
 ```html
 <!DOCTYPE html>
@@ -90,25 +98,22 @@ In `show.ejs`, add the following:
 </html>
 ```
 
-`fruit` is still undefined, but we'll address that in the next step. 
+> At this point `fruit` is undefined, but we'll address that in the next step. 
+
+### Pass data to `show` page
 
 We saw in an earlier example that `req.params` holds the index value of whichever index object was clicked on. Let's make a new variable called `index` and set it equal to the value passed to us by the `:fruitId` parameter. 
+
+Modify the `/:fruitId` route to render `show.ejs` with the corresponding *fruit data* based on the clicked item's `index`.
 
 ```js
 app.get('/:fruitId', (req, res) => {
   const index = req.params.fruitId
   // render show.ejs, and pass it a fruit object 
-  // based on the index the user clicked on: 
-  res.render('show.ejs', {
-    fruit: inventory[index]
-  })
+  res.render('show.ejs', { fruit: inventory[index] })
 })
 ```
 
-Because the list on our index page is generated from the `inventory` array, we can safely predict the order of ours link will be identical to the order of our objects. If we click `Banana`, the first element in our `inventory`, we expect `fruitId` to equal 0. If we click `Pineapple`, we expect `fruitId` to equal 3. We can in turn use this number to identify which link was clicked on. If a user clicks on `Pineapple`, the number 3 can be used to access the object at index 3 in `inventory`. 
+Because the list on our index page is generated from the `inventory` array, we can safely predict the order of ours link will be identical to the order of our objects. If we click `Banana`, the first element in our `inventory`, we expect `fruitId` to equal 0.
 
-Once we start working with external servers, we'll use more sophisticated or accurate methods to find the data than an index. For a small scale example, using the index of the object in our data array works fine to demonstrate the relationship between the "front-end" and "back-end" in our app. 
-
-
-
-
+> Note: In real-world applications, we'd use more sophisticated methods to retrieve data rather than relying on array indices. However, for demonstration purposes in this small-scale example, using the index is sufficient.

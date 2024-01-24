@@ -2,7 +2,7 @@
 
 ## About
 
-This module introduces EJS and rendering data to a template using Express. 
+Embedded JavaScript Templates (EJS) is a dynamic templating engine that merges JavaScript with HTML to create vibrant and interactive web pages with ease. Serving as a critical link between front-end design and back-end functionality, EJS empowers you to craft reusable components, handle intricate views, and construct scalable web applications. This module caters to intermediate learners with foundational knowledge in HTML, CSS, and JavaScript.
 
 ## Prerequisites
 
@@ -13,18 +13,19 @@ This module introduces EJS and rendering data to a template using Express.
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [Setup](./setup/README.md) | -- | -- | --- |
-| [Fundamentals](./fundamentals/README.md) | -- | -- | Define and understand how to use EJS. |
-| [Syntax](./syntax/README.md) | -- | -- | Understanding basic EJS tag syntax. |
-| [The Locals Object](./the-locals-object/README.md) | -- | -- | Passing data to a view template. |
-| [Adding a Show Route](./the-locals-object/README.md) | -- | -- | Passing data to a view template. |
+| [Setup](./setup/README.md) | -- | -- | Setting up the development environment |
+| [Concepts](./concepts/README.md) | -- | -- | Understand how EJS enables JS in html templates |
+| [Fundamentals](./fundamentals/README.md) | -- | -- | Render EJS view files from an express server |
+| [Syntax](./syntax/README.md) | -- | -- | Utilize EJS tag syntax to integrate JS in templates |
+| [The Locals Object](./the-locals-object/README.md) | -- | -- | Understand how to pass data into EJS templates |
+| [Adding a Show Route](./the-locals-object/README.md) | -- | -- | Create a 'show' route and pass item data to it |
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
 
 | Lesson | Video Time | Video | Skills |
 | ------ |:----------:|:-----:| ------ |
-| [Partial Templates](./level-up/partial-templates.md) | -- | -- | Create more DRY Express apps with partial templates. |
+| [Partial Templates](./partial-templates/README.md) | -- | -- | Create reusable components with EJS partial templates|
 | **Total Level Up content**                                          | -- | -- |                     |
 
 ## References
