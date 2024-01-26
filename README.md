@@ -18,7 +18,7 @@ Embedded JavaScript Templates (EJS) is a dynamic templating engine that merges J
 | [Fundamentals](./fundamentals/README.md) | -- | -- | Render EJS view files from an express server |
 | [Syntax](./syntax/README.md) | -- | -- | Utilize EJS tag syntax to integrate JS in templates |
 | [The Locals Object](./the-locals-object/README.md) | -- | -- | Understand how to pass data into EJS templates |
-| [Adding a Show Route](./the-locals-object/README.md) | -- | -- | Create a 'show' route and pass item data to it |
+| [Adding a Show Route](./adding-a-show-route/README.md) | -- | -- | Create a 'show' route and pass item data to it |
 | **Total content**                                        | -- | -- |                     |
 
 ## Level Up content
