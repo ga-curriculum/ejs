@@ -1,4 +1,4 @@
-# ![EJS](../assets/tktk-hero.png)
+# ![EJS](../assets/hero.png)
 
 ## About
 

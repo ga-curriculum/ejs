@@ -8,7 +8,7 @@ Learning a templating tool like EJS is an important step in your full-stack deve
 
 For example, consider a social media platform like Facebook or Instagram. Every user sees their own personalized homepage showing their name, photos, and updates from friends. Instead of creating unique homepages for each user (an impractical approach), templates enable you to design a single layout with placeholders for each user's unique data.
 
-![tktk Hunter, I like this asset but it could go a littttle further - maybe showing the data in an object, plus a template (basically as it is), and then the final resulting HTML.](./assets/template-engine.png)
+![Data and a template coming together to form a web page](./assets/template-engine.png)
 
 ## What is EJS?
 
