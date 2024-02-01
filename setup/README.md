@@ -21,46 +21,45 @@ Then, create a `server.js` file. This file will hold your work for this lecture:
 touch server.js
 ```
 
-With the file created, open the contents of the directory in VS Code:
-
-```bash
-code .
-```
-
-In the terminal, create a `package.json` with all of the default settings by running the following command:
+Create a `package.json` with all of the default settings by running the following command:
 
 ```bash
 npm init -y
 ```
 
-
-Now that we have a `package.json` file we can add a package from `npm` to our project. We're going to add `Express` to our project next: 
+Now that we have a `package.json` file, we can add a package from npm to our project. Add `Express` to our project with:
 
 ```bash
 npm i express
 ```
 
+Open the contents of the directory in VS Code:
 
-
-In `server.js`, add the following starter code: 
-
-```javascript
-const express = require('express')
-const app = express()
-
-app.get('/', (req, res) => {
-  res.send('Server is running')
-})
-
-app.listen(3000, () => {
-  console.log('Listening on port 3000')
-})
+```bash
+code .
 ```
 
-- Use `nodemon` to execute the `server.js` file by using this command in your terminal:
+In `server.js`, add the following starter code:
+
+```javascript
+// server.js
+
+const express = require('express');
+const app = express();
+
+app.get('/', (req, res) => {
+  res.send('The server is running!');
+});
+
+app.listen(3000, () => {
+  console.log('Listening on port 3000');
+});
+```
+
+Use `nodemon` to execute the `server.js` file by using this command in your terminal:
 
 ```bash
 nodemon
 ```
 
-Visit [localhost:3000](http://localhost:3000/) to verify your setup was sucessful! 
+Visit <http://localhost:3000> to verify your setup was successful!
