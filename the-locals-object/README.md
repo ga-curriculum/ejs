@@ -1,27 +1,31 @@
 # ![EJS - The Locals Object](./assets/hero.png)
 
-**Learning objective:** By the end of this lesson, students will understand how to pass data into EJS templates using the locals object. 
+**Learning objective:** By the end of this lesson, students will understand how to pass data into EJS templates using the locals object.
 
-## Passing Data into templates
+## Passing data into templates
 
-When using `res.render()` in Express, an optional object, known as the *locals object*, can be included. This object defines local variables for the view being rendered. The structure of the locals object is simple: the key is the variable's name in the EJS file, and the value is what that variable will hold.
+When using `res.render()` in Express, an optional object, known as the *locals* object, can be included as the second argument after the template that will be rendered. At its simplest it looks like this:
 
 ```javascript
+// server.js
+
 app.get('/', (req, res) => {
-  res.render('home.ejs', {})
-})
+  res.render('home.ejs', {});
+});
 ```
 
-> The locals object is how we get data into the template. Anything we put into this object will be available for us in the rendered view. 
+> 📚 The *locals* object is how we get data into the template. Anything we put into this object will be available to use in the view.
 
-Any data included in the locals object becomes available in your EJS template. 
-
-For example:
+This object defines variables accessible to the view being rendered. When you add a property to the object, the key will match the variable's name that you'll have access to in the EJS file, and the value is what that variable will hold. For example:
 
 ```javascript
+// server.js
+
 app.get('/', (req, res) => {
-  res.render('home.ejs', { msg: 'Welcome to the page!' })
-})
+  res.render('home.ejs', { 
+    msg: 'Welcome to the home page' 
+  });
+});
 ```
 
 ## Using data in views
@@ -29,6 +33,8 @@ app.get('/', (req, res) => {
 We can now access the `msg` variable within `home.ejs`:
 
 ```html
+<!-- views/home.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,27 +49,34 @@ We can now access the `msg` variable within `home.ejs`:
 </html>
 ```
 
+Refresh the page in the browser and you should see the "Welcome to the home page" text.
+
+tktk Hunter, I feel like there's a good opportunity for an asset here just to really drive this home.
+
 ### Handling complex data structures
 
-The locals object is versatile and can handle different data types, including arrays and objects. Let's pass an example array of objects, representing an inventory of fruit.
+The locals object is versatile and can handle different data types, including arrays and objects.
+
+Let's pass an object to the page and show the value of one of its properties:
 
 ```javascript
+// server.js
+
 app.get('/', (req, res) => {
   res.render('home.ejs', { 
-    msg: 'Our Fruit Inventory',
-    inventory: [
-      { name: 'Banana', qty: 4 },
-      { name: 'Apple', qty: 10 },
-      { name: 'Orange', qty: 3 },
-      { name: 'Pineapple', qty: 0 }
-    ]
-  })
-})
+    msg: 'Welcome to the home page' ,
+    player: {
+      name: "friend"
+    }
+  });
+});
 ```
 
-In your EJS file, loop through the inventory array to display each fruit item:
+Feel free to update the value of the `player.name` property to something of your choosing. Now let's access this in `home.ejs`:
 
 ```html
+<!-- views/home.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -73,14 +86,57 @@ In your EJS file, loop through the inventory array to display each fruit item:
 </head>
 <body>
   <h1>We are rendering a page!</h1>
-  <p><%= msg %></p>
+  <p><%= msg %>, <%= player.name %>!</p> 
+</body>
+</html>
+```
+
+Refresh the page in the browser again and you should see the "Welcome to the home page, friend!" text.
+
+Next, let's pass an example array of objects representing an inventory of items. Note, we'll also change the value of `msg`:
+
+```javascript
+// server.js
+
+app.get('/', (req, res) => {
+  res.render('home.ejs', { 
+    msg: 'Here is your inventory',
+    player: {
+      name: "friend"
+    },
+    inventory: [
+      { name: 'Candle', qty: 4 },
+      { name: 'Cheese', qty: 10 },
+      { name: 'Phone', qty: 1 },
+      { name: 'Tent', qty: 0 },
+      { name: 'Torch', qty: 5 }
+    ]
+  });
+});
+```
+
+In your EJS file, loop through the `inventory` array to display each item:
+
+```html
+<!-- views/home.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+<body>
+  <h1>We are rendering a page!</h1>
+  <p><%= msg %>, <%= player.name %>!</p> 
   <ul>
-    <% inventory.forEach(fruit => { %>
-      <li><%= fruit.name %>: <%= fruit.qty %></li>
-    <% }) %>
+    <% inventory.forEach((item) => { %>
+      <li><%= item.name %>: <%= item.qty %></li>
+    <% }); %>
   </ul>
 </body>
 </html>
 ```
 
-> 💡 Remember, the locals object is a powerful way to pass dynamic data to your EJS templates. It's a simple yet effective method to create interactive and personalized web pages.
+> 💡 The locals object is used to pass data to your EJS templates. It's the key to creating interactive and personalized web pages.
