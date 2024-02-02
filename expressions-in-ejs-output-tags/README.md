@@ -1,7 +1,5 @@
 # ![EJS - Expressions in EJS Output Tags](./assets/hero.png)
 
-tktk Hunter, could you update this hero?
-
 **Learning objective:** By the end of this lesson, students will understand in detail how to best utilize the EJS output tag with JavaScript expressions.
 
 ## Expressions vs. statements in JavaScript

@@ -37,8 +37,8 @@ We can now access the `msg` variable within `home.ejs`:
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
 </head>
@@ -51,7 +51,7 @@ We can now access the `msg` variable within `home.ejs`:
 
 Refresh the page in the browser and you should see the "Welcome to the home page" text.
 
-tktk Hunter, I feel like there's a good opportunity for an asset here just to really drive this home.
+![Data and a view forming a web page](./assets/data-in-views.png)
 
 ### Handling complex data structures
 
