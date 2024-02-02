@@ -1,4 +1,4 @@
-# ![EJS - Level Up - Partial Templates](./assets/hero.png)
+# ![EJS - Partial Templates](./assets/hero.png)
 
 **Learning objective:** By the end of this lesson, students will be able to implement partial templates in EJS to create reusable components.
 
