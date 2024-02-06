@@ -38,9 +38,9 @@ As you can see from this example, each line of JavaScript or block should be enc
 
 > 🧠 It's not uncommon for developers to develop playful nicknames for various elements like scriptlet and output tags. Here are a few of our favorites: *Magic Sandwiches, Noodle Brackets, Wizard Hats, Mustache Brackets, Squids*
 
-## Output tag `<%=  %>`
+## Output tag
 
-The output tag allows you to display the results of JavaScript expressions directly in your HTML.
+The output tag `<%=  %>` allows you to display the results of JavaScript expressions directly in your HTML.
 
 You'll primarily use this tag to insert dynamic data into your HTML. Use it to display variables, calculations, or anything that resolves to a single value.
 
