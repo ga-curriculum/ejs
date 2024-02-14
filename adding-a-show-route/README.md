@@ -4,7 +4,7 @@
 
 ## Show route
 
-Next, we'll add a show route to our app. The end goal is for each of the `<li>`'s in our inventory list become clickable links that take us to a page with information about the specific item we clicked on. This is typically referred to as a `show` page.
+Next, we'll add a show route to our app. The end goal is for each of the `<li>`'s in our inventory list to become clickable links that take us to a page with information about the specific item we clicked on. This is typically referred to as a `show` page.
 
 We'll begin by organizing our data and setting up our show route. This route will enable users to view details of specific items by clicking on them in a list.
 
@@ -43,7 +43,7 @@ app.listen(3000, () => {
 });
 ```
 
-> 💡 Nothing has changed in terms of functionality, you can refresh the home page and everything is the same it was before. However, now other functions can also access the data held in `inventory`!
+> 💡 Nothing has changed in terms of functionality; you can refresh the home page, and everything is the same as before. However, now other functions can also access the data held in `inventory`!
 
 ## Updating `home.ejs`
 
@@ -89,7 +89,7 @@ app.get('/:itemId', (req, res) => {
 });
 ```
 
-For now, all this route will do is listen for a request and then `console.log` the attached `req.params`. Click on a few of the links in the browser, and examine your terminal. You should see that `req.params` is an object that looks something like `{ itemId: 1 }`, where `1` will be replaced with the index of the item you clicked on.
+For now, all this route will do is listen for a request and then `console.log` the attached `req.params`. Click on a few of the links in the browser and examine your terminal. You should see that `req.params` is an object that looks something like `{ itemId: 1 }`, where `1` will be replaced with the index of the item you clicked on.
 
 ### Pass data to `show` page
 
@@ -109,9 +109,9 @@ app.get('/:itemId', (req, res) => {
 });
 ```
 
-Because the list on our index page is generated from the `inventory` array, we can safely predict the order the links will be identical to the order of objects in the array. If we click **Candle** - the first element in our `inventory` - we expect `req.params.itemId` to equal `0`.
+Because the list on our index page is generated from the `inventory` array, we can safely predict the order of the links will be identical to the order of objects in the array. If we click **Candle** - the first element in our `inventory` - we expect `req.params.itemId` to equal `0`.
 
-> Note: In real-world applications, we'd use more sophisticated methods to retrieve data rather than relying on array indices. However, for demonstration purposes in this small-scale example, using the index is sufficient.
+> Note: In real-world applications, we'd use more sophisticated methods to retrieve data rather than relying on array indices. However, using the index is sufficient for demonstration purposes in this small-scale example.
 
 ## Rendering the `show` page
 
