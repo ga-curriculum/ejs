@@ -46,13 +46,13 @@ You'll primarily use this tag to insert dynamic data into your HTML. Use it to d
 
 ### Using the output tag
 
-To use this tag, write your JavaScript expression between `<%=` and `%>`. Note that if you write the following code and refresh the page you'll receive an error, but as an example:
+To use this tag, write your JavaScript expression between `<%=` and `%>`. Note that if you write the following code and refresh the page, you'll receive an error, but as an example:
 
 ```html
 <p>Welcome, <%= player.name %></p>
 ```
 
-The output tag is ideal for accessing object properties as shown above or simple expressions like arithmetic operations. Test it out:
+The output tag is ideal for accessing object properties, as shown above, or simple expressions like arithmetic operations. Test it out:
 
 ```html
 <p>2 plus 2 is <%= 2 + 2 %></p>
