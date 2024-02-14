@@ -59,8 +59,8 @@ This isn't great, but it's nothing some conditional logic can't fix using an exp
 </html>
 ```
 
-If there is only one of an item the text `"is"` will be used. If there is any other amount, the text `"are"` will be used.
+If there is only one of an item the text `is` will be used. If there is any other amount, the text `are` will be used.
 
-This means that when there is only one of an item, we use the correct grammar to describe it. Cool!
+This means that when there is only one item, we use the correct grammar to describe it. Cool!
 
-Most logic should typically be handled before data is passed to the view, but it's apporpriate to handle smaller logic like this in a view.
+Most logic should typically be handled before data is passed to the view, but it's appropriate to handle smaller logic like this in a view.
