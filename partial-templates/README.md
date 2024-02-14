@@ -42,12 +42,12 @@ In `partials/html-head.ejs`, add:
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><%= title %></title>
+  <title>Inventory App</title>
 </head>
 <body>
 ```
 
-> 🧠  Note that we don't close the `<html>` tag - that's ok, these are called partial for a reason! It will be closed in the file where this partial is imported. This concept is important - it lets your partials be very flexible.
+> 🧠  Note that we don't close the `<html>` or `<body>` tags - that's ok, these are called partial for a reason! It will be closed in the file where this partial is imported. This concept is important - it lets your partials be very flexible.
 >
 > For example, if we wanted to customize what's in the html's `<head>` on each page (so we could do things like use page-specific stylesheets) you may prefer to move the closing `</head>` tag out of this file.
 
