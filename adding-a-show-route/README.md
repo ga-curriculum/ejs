@@ -18,8 +18,8 @@ In `server.js`, move the `inventory` array from the route handler to a global va
 const express = require('express');
 const app = express();
 
-// add the following: 
-inventory: [
+// add the following:
+const inventory = [
   { name: 'Candle', qty: 4 },
   { name: 'Cheese', qty: 10 },
   { name: 'Phone', qty: 1 },
