@@ -15,7 +15,7 @@ This module caters to intermediate learners with foundational knowledge in HTML,
 | [Fundamentals](../fundamentals/README.md)             | Render EJS view files from an Express server.                |
 | [Syntax](../syntax/README.md)                         | Utilize EJS tag syntax to integrate JavaScript in templates. |
 | [The Locals Object](../the-locals-object/README.md)   | Understand how to pass data into EJS templates.              |
-| [Adding a Show Route](../the-locals-object/README.md) | Create a show route and pass item data to it.                |
+| [Adding a Show Route](../adding-a-show-route/README.md) | Create a show route and pass item data to it.                |
 
 ## Level Up content
 
