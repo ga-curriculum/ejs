@@ -4,7 +4,7 @@
 
 ## Passing data into templates
 
-When using `res.render()` in Express, an optional object, known as the *locals* object, can be included as the second argument after the template that will be rendered. At its simplest it looks like this:
+When using `res.render()` in Express, an optional object, known as the *locals* object, can be included as the second argument after the template that will be rendered. At its simplest, it looks like this:
 
 ```javascript
 // server.js
@@ -49,7 +49,7 @@ We can now access the `msg` variable within `home.ejs`:
 </html>
 ```
 
-Refresh the page in the browser and you should see the "Welcome to the home page" text.
+Refresh the page in the browser, and you should see the "Welcome to the home page" text.
 
 ![Data and a view forming a web page](./assets/data-in-views.png)
 
@@ -72,7 +72,7 @@ app.get('/', (req, res) => {
 });
 ```
 
-Feel free to update the value of the `player.name` property to something of your choosing. Now let's access this in `home.ejs`:
+Feel free to update the value of the `player.name` property to something of your choosing. Now, let's access this in `home.ejs`:
 
 ```html
 <!-- views/home.ejs -->
@@ -91,9 +91,9 @@ Feel free to update the value of the `player.name` property to something of your
 </html>
 ```
 
-Refresh the page in the browser again and you should see the "Welcome to the home page, friend!" text.
+Refresh the page in the browser again, and you should see the "Welcome to the home page, friend!" text.
 
-Next, let's pass an example array of objects representing an inventory of items. Note, we'll also change the value of `msg`:
+Next, let's pass an example array of objects representing an inventory of items. Note we'll also change the value of `msg`:
 
 ```javascript
 // server.js
