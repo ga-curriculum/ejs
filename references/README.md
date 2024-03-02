@@ -2,6 +2,6 @@
 
 ## Lesson references
 
-- [EJS documentation](https://ejs.co/#docs)
-
-
+- [EJS](https://ejs.co/)
+- [EJS - Documentation](https://ejs.co/#docs)
+- [Express - Documentation - `res.render()`](http://expressjs.com/en/api.html#res.render)

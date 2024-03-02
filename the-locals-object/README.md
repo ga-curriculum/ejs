@@ -4,7 +4,7 @@
 
 ## Passing data into templates
 
-When using `res.render()` in Express, an optional object, known as the *locals* object, can be included as the second argument after the template that will be rendered. At its simplest, it looks like this:
+When using `res.render()` in Express, an optional object, known as the [*locals* object](http://expressjs.com/en/api.html#res.render), can be included as the second argument after the template that will be rendered. At its simplest, it looks like this:
 
 ```javascript
 // server.js

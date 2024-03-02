@@ -2,7 +2,7 @@
 
 ## About
 
-Embedded JavaScript Templates (EJS) is a dynamic templating engine that merges JavaScript with HTML to create vibrant and interactive web pages with ease. Serving as a critical link between front-end design and back-end functionality, EJS empowers you to craft reusable components, handle intricate views, and construct scalable web applications.
+Embedded JavaScript (EJS) is a dynamic templating engine that merges JavaScript with HTML to create vibrant and interactive web pages with ease. Serving as a critical link between front-end design and back-end functionality, EJS empowers you to craft reusable components, handle intricate views, and construct scalable web applications.
 
 This module caters to intermediate learners with foundational knowledge in HTML, CSS, and JavaScript.
 
@@ -10,11 +10,11 @@ This module caters to intermediate learners with foundational knowledge in HTML,
 
 | Lesson | Skills |
 | ------ | ------ |
-| [Setup](../setup/README.md)                           | Setting up the development environment.                      |
-| [Concepts](../concepts/README.md)                     | Understand how EJS enables JavaScript in HTML templates.     |
-| [Fundamentals](../fundamentals/README.md)             | Render EJS view files from an Express server.                |
-| [Syntax](../syntax/README.md)                         | Utilize EJS tag syntax to integrate JavaScript in templates. |
-| [The Locals Object](../the-locals-object/README.md)   | Understand how to pass data into EJS templates.              |
+| [Setup](../setup/README.md)                             | Setting up the development environment.                      |
+| [Concepts](../concepts/README.md)                       | Understand how EJS enables JavaScript in HTML templates.     |
+| [Fundamentals](../fundamentals/README.md)               | Render EJS view files from an Express server.                |
+| [Syntax](../syntax/README.md)                           | Utilize EJS tag syntax to integrate JavaScript in templates. |
+| [The Locals Object](../the-locals-object/README.md)     | Understand how to pass data into EJS templates.              |
 | [Adding a Show Route](../adding-a-show-route/README.md) | Create a show route and pass item data to it.                |
 
 ## Level Up content

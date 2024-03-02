@@ -2,7 +2,7 @@
 
 ## About
 
-Embedded JavaScript Templates (EJS) is a dynamic templating engine that merges JavaScript with HTML to create vibrant and interactive web pages with ease. Serving as a critical link between front-end design and back-end functionality, EJS empowers you to craft reusable components, handle intricate views, and construct scalable web applications.
+Embedded JavaScript (EJS) is a dynamic templating engine that merges JavaScript with HTML to create vibrant and interactive web pages with ease. Serving as a critical link between front-end design and back-end functionality, EJS empowers you to craft reusable components, handle intricate views, and construct scalable web applications.
 
 This module caters to intermediate learners with foundational knowledge in HTML, CSS, and JavaScript.
 
