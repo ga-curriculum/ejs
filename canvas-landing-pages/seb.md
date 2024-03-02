@@ -21,7 +21,7 @@ This module caters to intermediate learners with foundational knowledge in HTML,
 
 | Lesson | Skills |
 | ------ | ------ |
-| [Expressions in EJS Output Tags](../expressions-in-ejs-output-tags/README.md) | Using expressions in EJS output tags.                  |
+| [Expressions in EJS Output Tags](../expressions-in-ejs-output-tags/README.md) | Use expressions in EJS output tags.                    |
 | [Partial Templates](../partial-templates/README.md)                           | Create reusable components with EJS partial templates. |
 
 ## References

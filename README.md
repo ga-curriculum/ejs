@@ -21,7 +21,7 @@ This module caters to intermediate learners with foundational knowledge in HTML,
 | [Syntax](./syntax/README.md)                                                   | -- | -- | Utilize EJS tag syntax to integrate JavaScript in templates. |
 | [The Locals Object](./the-locals-object/README.md)                             | -- | -- | Understand how to pass data into EJS templates.              |
 | [Adding a Show Route](./adding-a-show-route/README.md)                         | -- | -- | Create a show route and pass item data to it.                |
-| [Expressions in EJS Output Tags](./expressions-in-ejs-output-tags/README.md)   | -- | -- | Using expressions in EJS output tags.                        |
+| [Expressions in EJS Output Tags](./expressions-in-ejs-output-tags/README.md)   | -- | -- | Use expressions in EJS output tags.                          |
 | [Partial Templates](./partial-templates/README.md)                             | -- | -- | Create reusable components with EJS partial templates.       |
 | **Total content**                                                              | -- | -- |                                                              |
 
