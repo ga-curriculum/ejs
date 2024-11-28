@@ -1,4 +1,7 @@
-# ![EJS - Syntax](./assets/hero.png)
+<h1>
+  <span class="headline">EJS</span>
+  <span class="subhead">Syntax</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to effectively utilize EJS syntax to integrate JavaScript logic and expressions within HTML templates.
 

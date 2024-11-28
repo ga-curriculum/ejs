@@ -1,4 +1,7 @@
-# ![EJS - The Locals Object](./assets/hero.png)
+<h1>
+  <span class="headline">EJS</span>
+  <span class="subhead">The Locals Object</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how to pass data into EJS templates using the locals object.
 

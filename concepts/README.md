@@ -1,4 +1,7 @@
-# ![EJS - Concepts](./assets/hero.png)
+<h1>
+  <span class="headline">EJS</span>
+  <span class="subhead">Concepts</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how EJS (Embedded JavaScript) is used in full-stack development with Node and Express.
 

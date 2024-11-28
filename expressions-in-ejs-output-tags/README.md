@@ -1,4 +1,7 @@
-# ![EJS - Expressions in EJS Output Tags](./assets/hero.png)
+<h1>
+  <span class="headline">EJS</span>
+  <span class="subhead">Expressions in EJS Output Tags</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will understand how to best utilize the EJS output tag with JavaScript expressions.
 

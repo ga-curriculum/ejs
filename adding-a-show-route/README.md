@@ -1,4 +1,7 @@
-# ![EJS - Adding a Show Route](./assets/hero.png)
+<h1>
+  <span class="headline">EJS</span>
+  <span class="subhead">Adding a Show Route</span>
+</h1>
 
 **Learning objective:** By the end of this lesson, students will be able to create a show route in an Express application using EJS to display details of individual items from a data list.
 

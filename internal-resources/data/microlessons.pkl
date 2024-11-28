@@ -1,0 +1,60 @@
+import "https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/static/v2/pkl/template.pkl" as Template
+
+// Add microlessons here, in the order they should be delivered
+
+setup = new Template.Microlesson {
+  friendlyName = "Setup"
+  dirName = "setup"
+  type = "Content"
+  videoUrl = ""
+}
+
+concepts = new Template.Microlesson {
+  friendlyName = "Concepts"
+  dirName = "concepts"
+  type = "Content"
+  videoUrl = ""
+}
+
+fundamentals = new Template.Microlesson {
+  friendlyName = "Fundamentals"
+  dirName = "fundamentals"
+  type = "Content"
+  videoUrl = ""
+}
+
+syntax = new Template.Microlesson {
+  friendlyName = "Syntax"
+  dirName = "syntax"
+  type = "Content"
+  videoUrl = ""
+}
+
+theLocalsObject = new Template.Microlesson {
+  friendlyName = "The Locals Object"
+  dirName = "the-locals-object"
+  type = "Content"
+  videoUrl = ""
+}
+
+addingAShowRoute = new Template.Microlesson {
+  friendlyName = "Adding a Show Route"
+  dirName = "adding-a-show-route"
+  type = "Content"
+  videoUrl = ""
+}
+
+expressionsInEjsOutputTags = new Template.Microlesson {
+  friendlyName = "Expressions in EJS Output Tags"
+  dirName = "expressions-in-ejs-output-tags"
+  type = "Content"
+  videoUrl = ""
+}
+
+partialTemplates = new Template.Microlesson {
+  friendlyName = "Partial Templates"
+  dirName = "partial-templates"
+  type = "Content"
+  videoUrl = ""
+}
+
