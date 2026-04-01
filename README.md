@@ -36,8 +36,8 @@ This module caters to intermediate learners with foundational knowledge in HTML,
 
 ### Course landing pages
 
-- [SEB - Software Engineering Bootcamp](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/ejs/canvas-landing-pages/seb.html)
-- [Fallback](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/ejs/canvas-landing-pages/fallback.html)
+- [SEB - Software Engineering Bootcamp](https://ga-curriculum.github.io/ejs/canvas-landing-pages/seb.html)
+- [Fallback](https://ga-curriculum.github.io/ejs/canvas-landing-pages/fallback.html)
 
 ### Resources
 
@@ -49,4 +49,4 @@ This module caters to intermediate learners with foundational knowledge in HTML,
 
 ---
 
-**Find a 👾 bug 👾 or have suggestions? [Let us know](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/universal-resources-internal/module-feedback.html)!**
+**Find a 👾 bug 👾 or have suggestions? [Let us know](https://ga-curriculum.github.io/universal-resources-internal/module-feedback.html)!**
